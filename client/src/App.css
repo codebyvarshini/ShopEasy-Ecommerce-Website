@@ -1,0 +1,634 @@
+
+/* =======================================
+   GOOGLE FONT
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =======================================
+   GLOBAL
+======================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f1f3f6;
+}
+
+/* =======================================
+   NAVBAR
+======================================= */
+
+.navbar {
+    background: #2874f0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ffe600;
+}
+
+.welcome-text {
+    color: #ffe600;
+    font-weight: 600;
+}
+
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* Navbar Cart & Wishlist Badge */
+
+.nav-links .nav-item .nav-count {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    border-radius: 50%;
+    background: #ff4757 !important;
+    color: #fff !important;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/* =======================================
+   HOME
+======================================= */
+
+.home {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home h1 {
+    font-size: 40px;
+    color: #222;
+}
+
+.home p {
+    color: gray;
+    margin-top: 10px;
+}
+
+/* =======================================
+   SEARCH BOX
+======================================= */
+
+.search-box {
+    width: 400px;
+    max-width: 90%;
+    padding: 14px;
+    margin: 30px auto;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0,0,0,.15);
+    font-size: 16px;
+}
+
+/* =======================================
+   PRODUCTS PAGE
+======================================= */
+
+.products {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 25px 50px;
+}
+
+.products h1 {
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 28px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* =======================================
+   PRODUCT CARD
+======================================= */
+
+.card {
+    position: relative;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: #f8f9fc;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 17px;
+    color: #222;
+    margin-top: 14px;
+    min-height: 42px;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.card .price {
+    color: #168447;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.card .rating {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Discount Badge */
+
+.discount-badge {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    background: #e53935;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Product Buttons */
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card > button:nth-of-type(1) {
+    background: #2874f0;
+    color: white;
+}
+
+.card > button:nth-of-type(1):hover {
+    background: #1158cc;
+}
+
+.card > button:nth-of-type(2) {
+    background: #ff4081;
+    color: white;
+}
+
+.card > button:nth-of-type(2):hover {
+    background: #d81b60;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+}
+
+.card a button {
+    background: #222;
+    color: white;
+}
+
+.card a button:hover {
+    background: #444;
+}
+
+/* =======================================
+   CART & WISHLIST
+======================================= */
+
+.cart-page,
+.wishlist-page {
+    padding: 40px;
+}
+
+.cart-page h1,
+.wishlist-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 85%;
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cart-item h3 {
+    color: #222;
+}
+
+.cart-item p {
+    color: green;
+    font-weight: bold;
+}
+
+.cart-item button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.cart-item button:hover {
+    background: darkred;
+}
+
+/* =======================================
+   LOGIN
+======================================= */
+
+.login-page {
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.login-page h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-page input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.login-page input:focus {
+    border: 2px solid #2874f0;
+}
+
+.login-page button {
+    width: 100%;
+    padding: 14px;
+    background: #2874f0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.login-page button:hover {
+    background: #1158cc;
+}
+
+/* =======================================
+   PRODUCT DETAILS
+======================================= */
+
+.details {
+    text-align: center;
+    padding: 60px;
+}
+
+.details img {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+.details h1 {
+    margin: 20px;
+}
+
+.details p {
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* =======================================
+   HERO BANNER
+======================================= */
+
+.hero-banner {
+    width: 95%;
+    height: 380px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2874f0, #4facfe);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    color: #ffe600;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    background: white;
+    color: #2874f0;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: #ffe600;
+    transform: translateY(-3px);
+}
+
+.hero-image img {
+    width: 400px;
+    max-width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* =======================================
+   SECTION TITLE
+======================================= */
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 32px;
+    color: #222;
+}
+
+/* =======================================
+   CATEGORIES
+======================================= */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.category-card {
+    width: 170px;
+    height: 170px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    background: #2874f0;
+    color: white;
+}
+
+.category-card p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* =======================================
+   RESPONSIVE DESIGN
+======================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .hero-banner {
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .products {
+        padding: 25px 15px;
+    }
+
+    .products h1 {
+        font-size: 25px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .hero-banner {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        width: 230px;
+    }
+
+    .cart-page,
+    .wishlist-page {
+        padding: 20px 10px;
+    }
+
+    .cart-item {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .details {
+        padding: 30px 15px;
+    }
+
+    .category-card {
+        width: 140px;
+        height: 140px;
+    }
+}
